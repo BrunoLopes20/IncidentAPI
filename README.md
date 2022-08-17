@@ -28,5 +28,5 @@ projeto spring mvc configurado
 
 * Executar: run main  MainApplication class ou mvn spring-boot:run -P "dev"
 
-* acessar: http://localhost:5000
+* acessar: http://localhost:8000
 
