@@ -1,0 +1,9 @@
+package br.com.bruno.incidentapi.services.exceptions;
+
+public class ObjectNotFoundException extends RuntimeException {
+
+    public ObjectNotFoundException(String message) {
+        super(message);
+    }
+
+}
