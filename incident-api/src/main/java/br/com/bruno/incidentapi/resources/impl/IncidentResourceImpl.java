@@ -1,7 +1,7 @@
 package br.com.bruno.incidentapi.resources.impl;
 
 import br.com.bruno.incidentapi.domain.Incident;
-import br.com.bruno.incidentapi.resources.IncidentResource;
+import br.com.bruno.incidentapi.resources.GenericResource;
 import br.com.bruno.incidentapi.services.IncidentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/api/incident")
-public class IncidentResourceImpl implements IncidentResource {
+public class IncidentResourceImpl implements GenericResource<Incident> {
 
     private final IncidentService service;
 

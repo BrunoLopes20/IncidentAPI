@@ -1,20 +1,23 @@
 package br.com.bruno.incidentapi.domain;
 
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import java.time.LocalDateTime;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "TB_INCIDENT")
+@Entity
+@Table(name = "TB_INCIDENT")
 public class Incident {
 
 
@@ -25,13 +28,14 @@ public class Incident {
     private String name;
 
     private String description;
+
+    @CreationTimestamp
     private LocalDateTime createdAt;
 
+    @UpdateTimestamp
     private LocalDateTime updatedAt;
 
     private LocalDateTime closedAt;
 
-    public void setCreatedAt() {
-        this.createdAt =  LocalDateTime.now();
-    }
+
 }
