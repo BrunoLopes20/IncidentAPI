@@ -21,12 +21,16 @@ projeto spring mvc configurado
  * Deletar incidente
  * Encerrar incidente
  
+### Bibliotecas adicionais
+ * Open API - Documentação da api (Swagger)
 
 ### Executar / Compilar:
 
-* compilar: mvn clean package -Dmaven.test.skip=true -P "hml"
+* compilar: mvn install -Dmaven.test.skip=true
 
-* Executar: run main  MainApplication class ou mvn spring-boot:run -P "dev"
+* Executar: run main  MainApplication class ou mvn spring-boot:run
 
-* acessar: http://localhost:8000
+* acessar: http://localhost:8080
 
+* acessar swagger: http://localhost:8080/api/swagger-ui/index.html
+  * Explore: /api/v3/api-docs
